@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "599280248424",
+    "project_id": "lyudmilapurodhika-304-002-lab5",
+    "storage_bucket": "lyudmilapurodhika-304-002-lab5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599280248424:android:b464c065c743fb28bf7ddd",
+        "android_client_info": {
+          "package_name": "com.example.lyudmilapurodhika_comp304sec002_lab5_group1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599280248424-c7u8e6jdftprju2qbb6hl2lujibbvjsk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9_eH7Q5hLz5kM0NsoVPUSmYq4B9papbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599280248424-c7u8e6jdftprju2qbb6hl2lujibbvjsk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
