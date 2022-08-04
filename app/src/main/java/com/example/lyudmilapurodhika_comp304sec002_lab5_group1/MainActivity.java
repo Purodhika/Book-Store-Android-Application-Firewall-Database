@@ -43,4 +43,9 @@ BooksViewModel booksViewModel;
         Intent intent = new Intent(ctx, bookWorkActivity.class);
         ctx.startActivity(intent);
     }
+
+    public void goToRegisterActivity(View view) {
+        Intent intent = new Intent(this, UserRegisterActivity.class);
+        startActivity(intent);
+    }
 }

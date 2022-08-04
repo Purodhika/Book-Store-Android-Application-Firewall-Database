@@ -12,12 +12,15 @@ import java.util.List;
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     private LayoutInflater layoutInflater;
     private List<Books> books;
+    Context context;
 
 
-    public BookAdapter(Context context, List<Books> books, Integer studentId) {
-        // capture required classes for the book adapter
-        this.layoutInflater = LayoutInflater.from(context);
+
+    public BookAdapter(bookWorkActivity context, List<Books> books)
+    {
+        this.context = context;
         this.books = books;
+        this.layoutInflater = LayoutInflater.from(context);
     }
 
     @NonNull
