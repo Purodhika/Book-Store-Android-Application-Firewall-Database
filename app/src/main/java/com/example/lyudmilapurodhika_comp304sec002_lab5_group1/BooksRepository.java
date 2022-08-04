@@ -17,5 +17,9 @@ public class BooksRepository
         public void insert(Books book){
             booksDao.insert(book);
         }
+        public void getBook(Books book) {booksDao.get(book);}
+        public void getAllBooks (){booksDao.getAllBooks();}
+        public void delete(Books book){booksDao.delete(book);};
+
 
 }

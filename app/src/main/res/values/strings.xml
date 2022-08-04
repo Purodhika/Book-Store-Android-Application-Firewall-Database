@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">LyudmilaPurodhika_COMP304Sec002_Lab5_Group1</string>
+    <string name="enter_book_title" />
+    <string name="enter_author_name" />
+    <string name="enter_description" />
+    <string name="enter_category" />
+    <string name="enter_quantity" />
+    <string name="save" />
+    <string name="delete" />
+    <string name="delete2">Delete</string>
+    <string name="save2">Save</string>
+    <string name="add_book">Add Book</string>
 </resources>

@@ -15,7 +15,7 @@ import android.os.Bundle;
             booksRepository = new BooksRepository(application);
         }
 
-        public void insert(Books student){
-            booksRepository.insert(student);
+        public void insert(Books books){
+            booksRepository.insert(books);
         }
 }

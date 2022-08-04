@@ -45,11 +45,11 @@ public class Books {
             this.genre = genre;
         }
 
-    public int getCost() {
+        public int getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+        public void setCost(int cost) {
         this.cost = cost;
     }
 }
