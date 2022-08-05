@@ -22,10 +22,6 @@ import java.util.List;
 public class bookWorkActivity extends AppCompatActivity {
     RecyclerView booksRV;
     BooksViewModel viewModel;
-    BookAdapter booksAdapter;
-    List<Books> list;
-
-    private DatabaseReference dbReference;
     BookAdapter adapter;
     List<Books> books;
 
@@ -34,38 +30,23 @@ public class bookWorkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_work);
 
-        //testing data
-        list.add(new Books("A","A", "A", 20));
-        list.add(new Books("B","B", "B", 10));
-        list.add(new Books("C","C", "C", 40));
-        list.add(new Books("D","D", "D", 24));
-        list.add(new Books("E","E", "E", 50));
-
-        books = new ArrayList<>();
-        adapter = new BookAdapter(this, books);
-        FirebaseDatabase db = FirebaseDatabase.getInstance("https://lyudmilapurodhika-304-002-lab5-default-rtdb.firebaseio.com/");
-        dbReference = db.getReference(Books.class.getSimpleName());
-
         // prep recyclerview
         booksRV = findViewById(R.id.booksRV);
-        booksRV.setHasFixedSize(true);
-        booksRV.setLayoutManager(new LinearLayoutManager(this));
-        booksRV.setAdapter(adapter);
 
+        // init array
+        books = new ArrayList<>();
+
+        // pass books into the recycler view
+        booksRV.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new BookAdapter(this,  books);
+        booksRV.setAdapter(adapter);
 
         //fetch data
         viewModel = new BooksViewModel(getApplication());
-
-        // pass selected songs into the recycler view
-        //rv.setLayoutManager(new LinearLayoutManager(this));
-       // adapter = new MyRVAdapter(this,  selectedSongs);
-       // rv.setAdapter(adapter);
-
-        dbReference.addValueEventListener(new ValueEventListener() {
+        DatabaseReference ref = viewModel.getAllBooks();
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Books book = dataSnapshot.getValue(Books.class);
                     books.add(book);

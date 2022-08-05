@@ -28,7 +28,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // create new view/viewholder to present a single book
         View newView = layoutInflater.inflate(R.layout.onebook, parent, false);
-        return null;
+        return new ViewHolder(newView);
     }
 
     @Override
@@ -46,13 +46,12 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView bookTitleText;
         TextView bookAuthorText;
-        TextView bookDescription;
         TextView bookCategory;
         TextView bookPrice;
         private Books book;
 
 
-        public ViewHolder(@NonNull View itemView, Integer studentId) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             // subscribe to click events for this view that holds a book
@@ -61,8 +60,8 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
             // upon creating, capture all views
             bookTitleText = itemView.findViewById(R.id.bookTitleText);
             bookAuthorText = itemView.findViewById(R.id.bookAuthorText);
-            bookDescription = itemView.findViewById(R.id.bookDescription);
             bookCategory = itemView.findViewById(R.id.bookCategory);
+            bookPrice = itemView.findViewById(R.id.bookPrice);
         }
 
         public void setBook(Books book) {

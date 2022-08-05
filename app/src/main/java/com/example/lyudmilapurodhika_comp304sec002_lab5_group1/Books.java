@@ -19,6 +19,7 @@ public class Books {
             this.name = name;
         }
 
+        public Books(){}
         public Books(String name, String author, String genre, int cost)
         {
             this.name = name;

@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.google.firebase.database.DatabaseReference;
+
 public class BooksRepository
 {
 
@@ -21,8 +23,11 @@ public class BooksRepository
         public void insert(Books book){
             booksDao.insert(book);
         }
-        public void getBook(Books book) {booksDao.get(book);}
-        public void getAllBooks (){booksDao.getAllBooks();}
+       // public DatabaseReference getBook(Books book) {booksDao.get(book);}
+        public DatabaseReference getAllBooks (){
+            DatabaseReference ref = booksDao.getAllBooks();
+            return ref;
+         }
         public void delete(Books book){booksDao.delete(book);};
 
 

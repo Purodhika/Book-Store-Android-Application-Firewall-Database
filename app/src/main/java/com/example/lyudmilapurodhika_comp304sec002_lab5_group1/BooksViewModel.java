@@ -8,7 +8,9 @@ import androidx.lifecycle.LiveData;
 import android.app.Application;
 import android.os.Bundle;
 
-    public class BooksViewModel extends AndroidViewModel {
+import com.google.firebase.database.DatabaseReference;
+
+public class BooksViewModel extends AndroidViewModel {
         //private static BooksViewModel booksRepository;
         //private static LiveData<T> signup;
         private BooksRepository booksRepository;
@@ -27,6 +29,11 @@ import android.os.Bundle;
 
         public void insert(Books books){
             booksRepository.insert(books);
+        }
+
+        public DatabaseReference getAllBooks(){
+            DatabaseReference ref  =  booksRepository.getAllBooks();
+            return ref;
         }
 
 }

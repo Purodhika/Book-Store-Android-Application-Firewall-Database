@@ -57,23 +57,12 @@ public class BooksDao {
             }
 
             //getting one book
-            public  void get(Books book){
-
-            }
+            //public  void get(Books book){}
 
             //getting all books
-            public void getAllBooks(){
-                myRef.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public DatabaseReference getAllBooks(){
+                return myRef;
 
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
             }
 
             //deleting a book
