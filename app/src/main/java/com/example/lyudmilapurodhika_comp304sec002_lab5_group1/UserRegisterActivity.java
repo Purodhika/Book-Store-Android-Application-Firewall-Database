@@ -2,6 +2,7 @@ package com.example.lyudmilapurodhika_comp304sec002_lab5_group1;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 public class UserRegisterActivity extends AppCompatActivity {
 BooksViewModel booksViewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,21 +38,20 @@ BooksViewModel booksViewModel;
 
         booksViewModel.getSignUpResult().observe( this, new Observer<Boolean>(){
             @Override
-            public void onChanged(@Nullable Boolean result){
-                if(result)
-                {
+            public void onChanged(@Nullable Boolean result) {
+                if (result) {
                     Toast.makeText(UserRegisterActivity.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(UserRegisterActivity.this, MainActivity.class);
                     startActivity(intent);
-                }
-                else
-                {
+                } else {
                     Toast.makeText(UserRegisterActivity.this, "Sign Up Failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-    }
-}
+
+        }}
+
+
 
 
 

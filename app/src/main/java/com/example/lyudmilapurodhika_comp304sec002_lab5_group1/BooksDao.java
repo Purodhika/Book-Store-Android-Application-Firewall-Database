@@ -29,11 +29,12 @@ public class BooksDao {
 
             private static volatile BooksDao INSTANCE;
             private static final String DATABASE_NAME = "BooksDB";
+            private static final String TAG = "DAO";
             FirebaseDatabase database;
             DatabaseReference myRef;
             private FirebaseAuth mAuth;
-    MutableLiveData<Boolean> flag = new MutableLiveData<>();
-    private LiveData<Boolean> signup;
+            MutableLiveData<Boolean> flag = new MutableLiveData<>();
+            //private LiveData<Boolean> signup;
 
     //Singleton Pattern to have one instance of DB
 
@@ -70,6 +71,9 @@ public class BooksDao {
                 myRef.push().setValue(null);
             }
 
+    private void signUpSuccess(boolean signup) {flag.postValue(signup);}
+    public LiveData<Boolean> getSignUpResult() {return flag;}
+
     public void signUp(String email, String password) 
     {
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -78,7 +82,7 @@ public class BooksDao {
                 if(task.isSuccessful())
                 {
                     
-                    Log.d(TAG, "createuser:success");
+                    Log.d(TAG, "create user:success");
                     FirebaseUser user = mAuth.getCurrentUser();
                     Log.d(TAG,"Current user " +user.getEmail());
                     signUpSuccess(true);
@@ -92,10 +96,6 @@ public class BooksDao {
         });
 
     }
-
-    private void signUpSuccess(boolean signup) {flag.postValue(signup);
-    }
-
-    public LiveData<Boolean> getSignUpResult() {return flag;}}
+}
 
 

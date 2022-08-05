@@ -31,9 +31,9 @@ public class BooksRepository
         public void delete(Books book){booksDao.delete(book);};
 
 
-    public void signUp(String email, String password) { booksDao.signUp(email, password);
-    }
+    public void signUp(String email, String password) { booksDao.signUp(email, password);}
 
-    public LiveData<Boolean> getSignUpResult() { return signup;
-    }
+
+    public LiveData<Boolean> getSignUpResult() { return signup;}
+
 }

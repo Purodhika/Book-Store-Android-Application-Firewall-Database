@@ -19,13 +19,14 @@ public class BooksViewModel extends AndroidViewModel {
         public BooksViewModel(@NonNull Application application) {
             super(application);
             booksRepository = new BooksRepository(application);
+            signup = booksRepository.getSignUpResult();
         }
 
-        public void signUp(String email, String password) { booksRepository.signUp(email, password);
-        }
+        public void signUp(String email, String password) { booksRepository.signUp(email, password);}
 
-        public LiveData<Boolean> getSignUpResult() { return signup;
-        }
+
+        public LiveData<Boolean> getSignUpResult() { return signup;}
+
 
         public void insert(Books books){
             booksRepository.insert(books);
