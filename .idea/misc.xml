@@ -4,17 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/drawable/applogo.xml" value="0.1" />
+        <entry key="..\:/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_book_work.xml" value="0.1796875" />
         <entry key="..\:/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_book_add.xml" value="0.2421875" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_book_edit.xml" value="0.228125" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_book_edit2.xml" value="0.2421875" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_book_work.xml" value="0.23958333333333334" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_books.xml" value="0.23052536231884058" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_books_dao.xml" value="0.23052536231884058" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_books_repositoy.xml" value="0.23052536231884058" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_books_view_model.xml" value="0.23052536231884058" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_main.xml" value="0.23052536231884058" />
-        <entry key="..\:/Users/milaz/OneDrive/Desktop/3479/semester2/COM304Mobile/lab5/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/onebook.xml" value="0.24114583333333334" />
+        <entry key="..\:/LyudmilaPurodhika_COMP304Sec002_Lab5_Group1/app/src/main/res/layout/activity_user_register.xml" value="0.1" />
       </map>
     </option>
   </component>
