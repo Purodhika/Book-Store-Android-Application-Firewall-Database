@@ -61,17 +61,17 @@ public class bookWorkActivity extends AppCompatActivity {
             }
         });
     }
-}
+
 
     //activity to display all books
     //on click on recycler view an Edit book Activity will open
     //where we can delete or edit a book
     //on add book button an activity will open to add a new book
 
-//    public void addNewBook(View view) {
-//        // open new activity
-//        Context ctx = view.getContext();
-//        Intent intent = new Intent(ctx, BookAddActivity.class);
-//        ctx.startActivity(intent);
-//    }
-//}
+    public void addNewBook(View view) {
+        // open new activity
+        Context ctx = view.getContext();
+        Intent intent = new Intent(ctx, BookAddActivity.class);
+        ctx.startActivity(intent);
+    }
+}

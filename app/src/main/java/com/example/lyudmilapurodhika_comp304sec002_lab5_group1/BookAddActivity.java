@@ -26,8 +26,13 @@ public class BookAddActivity extends AppCompatActivity {
     }
 
     public void addNewBook(View view) {
-        booksViewModel = ViewModelProviders.of(this).get(BooksViewModel.class);
-       // Books b = new Books(bookTitleTextView,bookAuthorTextView,bookCategoryTextView, bookCostTextView);
-       // booksViewModel.insert(b);
+        booksViewModel = new BooksViewModel(getApplication());
+          Books b = new Books(
+         bookTitleTextView.getText().toString(),
+         bookAuthorTextView.getText().toString(),
+         bookCategoryTextView.getText().toString(),
+         Integer.parseInt(bookCostTextView.getText().toString())
+         );
+        booksViewModel.insert(b);
     }
 }
