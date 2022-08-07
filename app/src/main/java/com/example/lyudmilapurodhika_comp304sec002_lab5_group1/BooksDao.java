@@ -54,7 +54,11 @@ public class BooksDao {
 
             //insert one book
             public void insert(Books book){
-                myRef.push().setValue(book);
+
+                DatabaseReference r = myRef.push();
+                String key = r.getKey();
+                book.setKey(key);
+                r.setValue(book);
             }
 
             //getting one book
@@ -68,7 +72,7 @@ public class BooksDao {
 
             //deleting a book
             public void delete(Books book){
-                myRef.push().setValue(null);
+                myRef.child(book.getKey()).removeValue();
             }
 
     private void signUpSuccess(boolean signup) {flag.postValue(signup);}

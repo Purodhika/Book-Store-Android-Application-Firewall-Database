@@ -22,19 +22,6 @@ BooksViewModel booksViewModel;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        // Write a message to the database
-//        FirebaseDatabase database = FirebaseDatabase.getInstance("https://lyudmilapurodhika-304-002-lab5-default-rtdb.firebaseio.com/");
-//        DatabaseReference myRef = database.getReference("message");
-//
-//        myRef.setValue("Hello, World!");
-        //booksViewModel = new BooksViewModel(getApplication());
-        //Books b = new Books("The Secret","Rhonda Byrne","Motivational", 20);
-       // Books book2 = new Books("Secons Book", "John Smith", "Documentary", 15);
-       // Books book3 = new Books("Third Book", "Mary Johnson", "History", 12);
-       // booksViewModel.insert(b);
-       // booksViewModel.insert(book2);
-        //booksViewModel.insert(book3);
-        //Listening Code
     }
 
     public void goToWorkActivity(View view) {

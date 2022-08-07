@@ -1,9 +1,11 @@
 package com.example.lyudmilapurodhika_comp304sec002_lab5_group1;
 
+import android.app.Application;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,16 +13,18 @@ import java.util.List;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     private LayoutInflater layoutInflater;
+    private Application application;
     private List<Books> books;
     Context context;
 
 
 
-    public BookAdapter(bookWorkActivity context, List<Books> books)
+    public BookAdapter(bookWorkActivity context, List<Books> books, Application application)
     {
         this.context = context;
         this.books = books;
         this.layoutInflater = LayoutInflater.from(context);
+        this.application = application;
     }
 
     @NonNull
@@ -28,7 +32,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // create new view/viewholder to present a single book
         View newView = layoutInflater.inflate(R.layout.onebook, parent, false);
-        return new ViewHolder(newView);
+        return new ViewHolder(newView, application);
     }
 
     @Override
@@ -43,25 +47,35 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
         return books.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView bookTitleText;
         TextView bookAuthorText;
         TextView bookCategory;
         TextView bookPrice;
+        Button button;
         private Books book;
+        BooksViewModel viewModel;
 
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, Application application) {
             super(itemView);
 
-            // subscribe to click events for this view that holds a book
-            itemView.setOnClickListener(this);
+            viewModel = new BooksViewModel(application);
 
             // upon creating, capture all views
             bookTitleText = itemView.findViewById(R.id.bookTitleText);
             bookAuthorText = itemView.findViewById(R.id.bookAuthorText);
             bookCategory = itemView.findViewById(R.id.bookCategory);
             bookPrice = itemView.findViewById(R.id.bookPrice);
+            button = itemView.findViewById(R.id.deleteBookButton);
+
+            // add events
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    viewModel.delete(book);
+                }
+            });
         }
 
         public void setBook(Books book) {
@@ -72,10 +86,6 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
             bookAuthorText.setText("Author: " + book.getAuthor());
             bookCategory.setText("Genre: " + book.getGenre());
             bookPrice.setText("Price: " + book.getCost());
-        }
-        @Override
-        public void onClick(View v) {
-
         }
     }
 }

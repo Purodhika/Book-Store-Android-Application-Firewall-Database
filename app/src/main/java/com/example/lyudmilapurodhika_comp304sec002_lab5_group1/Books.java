@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class Books {
-
+        private String key;
         private String name;
         private String author;
         private String genre;
         private int cost;
+
+        public String getKey(){return key;}
+        public void setKey(String key){this.key = key;}
 
         public String getName() {
             return name;

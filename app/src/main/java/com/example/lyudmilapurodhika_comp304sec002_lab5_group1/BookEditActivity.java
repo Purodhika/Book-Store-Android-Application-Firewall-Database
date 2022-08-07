@@ -27,10 +27,4 @@ public class BookEditActivity extends AppCompatActivity {
         bookCostTextView = findViewById(R.id.editBookCost);
     }
 
-    public void saveBook(View view) {
-    }
-
-    public void deleteBook(View view) {
-
-    }
 }

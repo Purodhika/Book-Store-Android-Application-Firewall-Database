@@ -37,4 +37,12 @@
         app:layout_constraintTop_toBottomOf="@id/bookCategory"
         app:layout_constraintStart_toStartOf="parent"></TextView>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/deleteBookButton"
+        android:text="Delete"></Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,6 +50,6 @@
         android:onClick="addNewBook"
         android:text="@string/add_book"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/editBookSave"></Button>
+        app:layout_constraintStart_toStartOf="parent"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

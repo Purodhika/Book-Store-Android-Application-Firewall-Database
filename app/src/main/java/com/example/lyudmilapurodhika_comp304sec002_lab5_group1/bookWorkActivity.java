@@ -38,7 +38,7 @@ public class bookWorkActivity extends AppCompatActivity {
 
         // pass books into the recycler view
         booksRV.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new BookAdapter(this,  books);
+        adapter = new BookAdapter(this,  books, getApplication());
         booksRV.setAdapter(adapter);
 
         //fetch data
@@ -63,15 +63,11 @@ public class bookWorkActivity extends AppCompatActivity {
     }
 
 
-    //activity to display all books
-    //on click on recycler view an Edit book Activity will open
-    //where we can delete or edit a book
-    //on add book button an activity will open to add a new book
-
     public void addNewBook(View view) {
         // open new activity
         Context ctx = view.getContext();
         Intent intent = new Intent(ctx, BookAddActivity.class);
         ctx.startActivity(intent);
     }
+
 }
