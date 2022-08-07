@@ -8,6 +8,8 @@ import androidx.lifecycle.LiveData;
 import android.app.Application;
 import android.os.Bundle;
 
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.database.DatabaseReference;
 
 public class BooksViewModel extends AndroidViewModel {
@@ -23,7 +25,9 @@ public class BooksViewModel extends AndroidViewModel {
         }
 
         public void signUp(String email, String password) { booksRepository.signUp(email, password);}
-
+        public Task<AuthResult> signIn(String username, String password) {
+            return booksRepository.signIn(username, password);
+        }
 
         public LiveData<Boolean> getSignUpResult() { return signup;}
 

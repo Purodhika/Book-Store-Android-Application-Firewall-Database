@@ -100,6 +100,10 @@ public class BooksDao {
         });
 
     }
+
+    public Task<AuthResult> signIn(String username, String password){
+                return mAuth.signInWithEmailAndPassword(username, password);
+    }
 }
 
 

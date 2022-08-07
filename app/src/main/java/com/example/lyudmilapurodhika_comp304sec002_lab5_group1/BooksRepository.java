@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.database.DatabaseReference;
 
 public class BooksRepository
@@ -33,6 +35,9 @@ public class BooksRepository
 
     public void signUp(String email, String password) { booksDao.signUp(email, password);}
 
+    public Task<AuthResult> signIn(String username, String password) {
+            return booksDao.signIn(username, password);
+    }
 
     public LiveData<Boolean> getSignUpResult() { return signup;}
 
