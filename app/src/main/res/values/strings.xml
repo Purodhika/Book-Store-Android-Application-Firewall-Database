@@ -10,4 +10,8 @@
     <string name="delete2">Delete</string>
     <string name="save2">Save</string>
     <string name="add_book">Add Book</string>
+    <string name="enter_book_title_here">enter book title here</string>
+    <string name="enter_author_name_here">enter author name here</string>
+    <string name="enter_genre_here">enter genre here</string>
+    <string name="enter_price_here">enter price here</string>
 </resources>
