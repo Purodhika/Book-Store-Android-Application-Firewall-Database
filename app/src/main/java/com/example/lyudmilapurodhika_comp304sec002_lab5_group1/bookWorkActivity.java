@@ -41,12 +41,17 @@ public class bookWorkActivity extends AppCompatActivity {
         adapter = new BookAdapter(this,  books, getApplication());
         booksRV.setAdapter(adapter);
 
+
         //fetch data
         viewModel = new BooksViewModel(getApplication());
         DatabaseReference ref = viewModel.getAllBooks();
+
+
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //
+                books.clear();
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Books book = dataSnapshot.getValue(Books.class);
                     books.add(book);

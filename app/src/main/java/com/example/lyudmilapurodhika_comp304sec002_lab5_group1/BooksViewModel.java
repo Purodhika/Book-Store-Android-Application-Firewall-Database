@@ -13,8 +13,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.database.DatabaseReference;
 
 public class BooksViewModel extends AndroidViewModel {
-        //private static BooksViewModel booksRepository;
-        //private static LiveData<T> signup;
+
         private BooksRepository booksRepository;
         private LiveData<Boolean> signup;
 

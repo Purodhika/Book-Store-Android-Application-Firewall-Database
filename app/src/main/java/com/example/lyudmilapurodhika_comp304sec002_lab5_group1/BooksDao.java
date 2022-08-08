@@ -62,7 +62,7 @@ public class BooksDao {
             }
 
             //getting one book
-            //public  void get(Books book){}
+
 
             //getting all books
             public DatabaseReference getAllBooks(){

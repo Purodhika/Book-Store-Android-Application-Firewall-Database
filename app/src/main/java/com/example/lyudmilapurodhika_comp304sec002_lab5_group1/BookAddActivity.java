@@ -27,7 +27,7 @@ public class BookAddActivity extends AppCompatActivity {
         bookCategoryTextView = findViewById(R.id.editBookGenre);
         bookCostTextView = findViewById(R.id.editBookCost);
     }
-
+    //adding books
     public void addNewBook(View view) {
         booksViewModel = new BooksViewModel(getApplication());
           Books b = new Books(
@@ -37,7 +37,11 @@ public class BookAddActivity extends AppCompatActivity {
          Integer.parseInt(bookCostTextView.getText().toString())
          );
         booksViewModel.insert(b);
+        //message
         Toast.makeText(BookAddActivity.this, "Book added!", Toast.LENGTH_SHORT).show();
+        // start next activity
+        Intent intent = new Intent(this, bookWorkActivity.class);
+        startActivity(intent);
     }
 
 }

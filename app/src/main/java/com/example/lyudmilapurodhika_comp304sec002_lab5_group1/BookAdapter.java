@@ -2,11 +2,14 @@ package com.example.lyudmilapurodhika_comp304sec002_lab5_group1;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
@@ -16,6 +19,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     private Application application;
     private List<Books> books;
     Context context;
+
 
 
 
@@ -69,13 +73,14 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
             bookPrice = itemView.findViewById(R.id.bookPrice);
             button = itemView.findViewById(R.id.deleteBookButton);
 
-            // add events
+            // deleting a book
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     viewModel.delete(book);
                 }
             });
+
         }
 
         public void setBook(Books book) {
