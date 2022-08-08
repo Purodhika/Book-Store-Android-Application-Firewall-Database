@@ -3,9 +3,12 @@ package com.example.lyudmilapurodhika_comp304sec002_lab5_group1;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class BookAddActivity extends AppCompatActivity {
     private EditText bookTitleTextView;
@@ -34,5 +37,7 @@ public class BookAddActivity extends AppCompatActivity {
          Integer.parseInt(bookCostTextView.getText().toString())
          );
         booksViewModel.insert(b);
+        Toast.makeText(BookAddActivity.this, "Book added!", Toast.LENGTH_SHORT).show();
     }
+
 }
